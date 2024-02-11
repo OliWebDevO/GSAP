@@ -1,0 +1,335 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+body {
+    overflow: hidden;
+    margin: 0; 
+}
+header {
+    display: grid;
+    place-content: center;
+    height: 100vh;
+    // &:hover .container {
+    //     clip-path: polygon(7% 7%, 93% 7%, 93% 93%, 7% 93%);
+    // }
+    h1 {
+        font-size: 7rem;
+        text-transform: uppercase;
+        font-family: 'Bebas Neue', sans-serif;
+        color: white;
+    }
+    .container {
+        height: 100vh;
+        width: 100%;
+        position: absolute;
+        // clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+        clip-path: polygon(10% 10%, 90% 10%, 90% 90%, 10% 90%);
+        transition: clip-path 1s;
+        .img {
+            background: url(../img/Slide1.jpg) center / cover;
+            height: 100vh;
+            width: 100vw;
+        }
+    }
+    .container2 {
+        height: 100vh;
+        width: 100%;
+        position: absolute;
+        // clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+        clip-path: polygon(10% 10%, 90% 10%, 90% 90%, 10% 90%);
+        transition: clip-path 1s;
+        z-index: -1;
+        .img {
+            background: url(../img/Slide2.jpg) center / cover;
+            height: 100vh;
+            width: 100vw;
+        }
+        .content {
+            z-index: -1;
+        }
+    }
+    .container3 {
+        height: 100vh;
+        width: 100%;
+        position: absolute;
+        // clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+        clip-path: polygon(10% 10%, 90% 10%, 90% 90%, 10% 90%);
+        transition: clip-path 1s;
+        z-index: -2;
+        .img {
+            background: url(../img/Slide3.jpg) center / cover;
+            height: 100vh;
+            width: 100vw;
+        }
+        .content {
+            z-index: -2;
+        }
+    }
+  
+    .content {
+        position: absolute;
+        display: grid;
+        z-index: 1;
+        place-items: center;
+        height: 100vh;
+        width: 100%;
+    }
+}   
+.parttwo {
+    display: grid;
+    place-content: center;
+    height: 100vh;
+}
+// .flex-title {
+//     display: flex;
+//     width: 0vw;
+// }
+
+.reveal-type {
+    font-size: 7rem;
+    text-transform: uppercase;
+    font-family: 'Bebas Neue', sans-serif;
+    // This clip-path can be found on : https://bennettfeely.com/clippy/
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    line-height: 5.9rem;
+}
+.second-one {
+    font-size: 7rem;
+    text-transform: uppercase;
+    font-family: 'Bebas Neue', sans-serif;
+    // This clip-path can be found on : https://bennettfeely.com/clippy/
+    clip-path: polygon(0 0, 100% 0, 100% 32%, 0 32%);
+    line-height: 5.9rem;
+}
+
+#my-text-2 {
+    color:white;
+    font-size: 7rem;
+    text-transform: uppercase;
+    font-family: 'Bebas Neue', sans-serif;
+    // This clip-path can be found on : https://bennettfeely.com/clippy/
+    // // clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    line-height: 5.9rem;
+}
+.reveal-type .char {
+    transform: translateY(115px);
+    transition: transform 0.7s;
+}
+.text-appear {
+
+h1:nth-last-of-type(2) {
+    .char {
+    transform: translateY(-115px);
+    transition: transform 0.7s;
+}
+}
+h1:nth-last-of-type(4) {
+    .char {
+        transform: translateY(-115px);
+        transition: transform 0.7s;
+    }
+}
+}
+.hamburger {
+    height: 300px;
+    margin: 0 auto;
+}
+
+// // Smooth Galery from https://camillemormal.com , done with few lines of code 
+
+.awesome-gallery {
+    position: relative ;
+    background-color: black;
+    height: 100vh;
+    width: 100vw;
+    margin: 0rem;
+    overflow: hidden;
+    display: grid;
+    place-content:start center;
+}
+#image-track {
+    display: flex;
+    gap: 4vmin;
+    position: absolute;
+    left: 50%;
+    top: 50%; transform: translate(0%, -50%);
+    user-select: none;
+
+    .image {
+        width: 40vmin;
+        height: 56vmin;
+        object-fit: cover;
+        object-position: 100% center;
+        border-radius: 3px;
+    }
+}
+
+// Animate the burger with plain css
+
+// .hamburger:hover .line-one,
+// .hamburger:hover .line-two,
+// .hamburger:hover .line-three {
+//     transform-origin : 50% 50%;
+//     animation: line-grow ease-out 500ms;
+// }
+
+// .hamburger:hover .line-two {
+//     animation-delay: 75ms;
+// }
+
+// .hamburger:hover .line-three {
+//     animation-delay: 150ms;
+// }
+
+// @keyframes line-grow {
+//     0% {transform :scaleX(1)}
+//     50% {transform :scaleX(1.5)}
+//     0% {transform :scaleX(1)}
+// }
+
+// .text-appear {
+//     height: 200vh;
+//     display: grid;
+//     place-content: space-evenly space-evenly;
+//     .reveal-type2:nth-of-type(1) {
+//         margin-left: 0px;
+//     }
+// }
+
+.text-appear {
+    margin: 5vh 5vw;
+    width: 1300px;
+    height:200vh;
+    gap: 100px;
+    display: grid;
+    grid-template-columns:400px 400px 400px;
+    grid-template-rows: 1fr 1fr 1fr;
+
+    h1:nth-of-type(1) {
+        grid-column: 1 / 2;
+        grid-row: 1/2;
+        
+    }
+    h1:nth-of-type(2) {
+        grid-column: 1 / 2;
+        grid-row: 2/3;
+    }
+    h1:nth-of-type(3) {
+        grid-column: 2 / 3;
+        grid-row: 2/3;
+    }
+    h1:nth-of-type(4) {
+        grid-column: 3 / 4;
+        grid-row: 2/3;
+    }
+    h1:nth-of-type(5) {
+        grid-column: 3 / 4;
+        grid-row: 3/4;
+    }
+    p:nth-of-type(1) {
+        margin-top: 200px;
+        grid-column: 1 / 2;
+        grid-row: 1/2;
+    }
+    p:nth-of-type(2) {
+        // margin-top: 200px;
+        // grid-column: 2 / 3;
+        // grid-row: 2/3;
+        margin-top: 200px;
+        grid-column: 3 / 4;
+        grid-row: 3/4;
+        padding-right : 30px;
+    }
+    // p:nth-of-type(3) {
+    //     // margin-top: 200px;
+    //     // grid-column: 3 / 4;
+    //     // grid-row: 3/4;
+    //     // padding-right : 30px;
+    // }
+   .elementjsright {
+        grid-column: 2 / 4;
+        grid-row: 1/2;
+        overflow: hidden;
+        justify-self: center;
+        // img {
+        //     width : 100%
+        // }
+    }
+    // img:nth-of-type(2) {
+    //     grid-column: 1 / 2;
+    //     grid-row: 2/3;
+    // }
+    // img:nth-of-type(3) {
+    //     grid-column: 3 / 4;
+    //     grid-row: 2/3;
+    // }
+    .elementjsleft {
+        grid-column: 1 / 3;
+        grid-row: 3/4;
+        overflow: hidden;
+        // justify-self: center;
+        // img {
+        //    width: 100%;
+        // }
+    }
+  }
+  img {
+    width: 750px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+
+  .elementjs {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    margin: 20px 0;
+    overflow: hidden;
+}
+.elementjsright {
+    opacity: 0;
+    transform: translateX(200px);
+    transition: opacity 0.5s ease-in-out, transform 1s ease-in-out;
+    margin: 20px 0;
+    overflow: hidden;
+}
+.elementjsleft {
+    opacity: 0;
+    transform: translateX(-200px);
+    transition: opacity 0.5s ease-in-out, transform 1s ease-in-out;
+    margin: 20px 0;
+    overflow: hidden;
+}
+
+
+.reveal {
+    opacity: 1;
+    transform: translateY(0);
+    transform: translateX(0);
+    // transition: opacity 0.5s ease-out, transform 0.5s
+    overflow: hidden;
+}
+
+.text-appear { 
+    h1.reveal-type2 {
+    margin-top: 20px;
+    color:black;
+    font-size: 7rem;
+    text-transform: uppercase;
+    font-family: 'Bebas Neue', sans-serif;
+    // This clip-path can be found on : https://bennettfeely.com/clippy/
+    // clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    line-height: 5.9rem;
+    }
+}
+
+.next-one {
+    
+    background-color: black;
+    height: 100vh;
+    width: 100vw;
+    
+}
+
